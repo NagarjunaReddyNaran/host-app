@@ -8,7 +8,7 @@ const routes: Routes = [
     path: 'counterApp',
     loadChildren: () => {
       return loadRemoteModule({
-        remoteEntry: "http://localhost:4300/remoteEntry.js",
+        remoteEntry: "https://remote-app-rho.vercel.app/remoteEntry.js", //"http://localhost:4300/remoteEntry.js",
         remoteName: "remoteApp",
         exposedModule: "./CounterModule"
       }).then(m => m.CounterModule).catch(err => console.log(err));
